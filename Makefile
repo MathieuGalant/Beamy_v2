@@ -1,11 +1,11 @@
 CC=gcc
 CFLAGS= -I 
-INCLUDES = -I/usr/include/libxml2/ -I/home/pi/Desktop/beamy/beagle/fmod
+INCLUDES = -I/home/debian/beamy/fmod
 DEPS = command.h alarm.h xml.h video.h server.h definition.h
 
 OBJ = main.o server.o video.o xml.o alarm.o command.o
-LFLAGS = -L/home/pi/Desktop/beamy/beagle
-LIBS= -lxml2 -lcurl /home/pi/Desktop/beamy/beagle/fmod/libfmod.so
+LFLAGS = -L/home/debian/beamy/
+LIBS= -lxml2 -lcurl /home/debian/beamy/fmod/libfmod.so
 MAIN= main
 
 
