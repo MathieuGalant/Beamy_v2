@@ -10,7 +10,6 @@
 #include "alarm.h"
 #include "definition.h"
 #include "video.h"
-#include <curl/curl.h>
 #include "server.h"
 
 
