@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <libxml2/libxml/parser.h>
-#include <fmod.h>
+#include <libxml/parser.h>
+#include "fmod/fmod.h"
 #include <dirent.h>
 #include "xml.h"
 #include "command.h"
