@@ -110,13 +110,22 @@ int main(int argc, char **argv)
         time_2=clock();
         timeinfo=getTime();
 
-        if((float)(time_2-time_1)/CLOCKS_PER_SEC>60) // get xml alarm from the server every minute
+       if((float)(time_2-time_1)/CLOCKS_PER_SEC>1) // get xml alarm from the server every second
         {
             getAlarmServer(1,alarmFile,token);
             time_1=clock();
             printf("ok\n");
+            readAlarmXmlFile(alarmFile,anAlarm);
         }
-
+        if(anAlarm->enabled==true)
+        {
+        printf("%s  %s\n",command[0],command[1]);
+                strcpy(videoName,name);
+                playVideo(videoFolder,videoName);
+                playingVideo=1;
+                modifyXml(commandFile);
+        }
+/*
         readXmlFile(addAlarmFile, addAlarm); //read the addAlarm XML
         if (strcmp(addAlarm[0],"1")==0) // check if someone is adding an alarm
         {
@@ -165,6 +174,7 @@ int main(int argc, char **argv)
                 current =current->next;
             }
         }
+*/
         switch(action)
         {
             case 1: //play music
